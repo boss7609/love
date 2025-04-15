@@ -1,385 +1,267 @@
-/* CSS 樣式將放在這裡 */
-        :root {
-            --primary-color: #8B6B4A;
-            --secondary-color: #F5F0E6;
-            --accent-color: #D4A76A;
-            --text-color: #333333;
-            --light-text: #777777;
-            --white: #FFFFFF;
-        }
-        
-        body {
-            font-family: 'Noto Sans TC', sans-serif;
-            line-height: 1.6;
-            color: var(--text-color);
-            margin: 0;
-            padding: 0;
-        }
-        
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        
-        /* 導航欄樣式 */
-        header.site-header {
-            background-color: var(--white);
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-        }
-        
-        .header-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 0;
-        }
-		/* 修改logo部分的CSS */
+/* ========= 變數設定 ========= */
+:root {
+    --primary-color: #8B6B4A;
+    --secondary-color: #F5F0E6;
+    --accent-color: #D4A76A;
+    --text-color: #333333;
+    --light-text: #777777;
+    --white: #FFFFFF;
+}
+
+/* ========= 基本結構 ========= */
+body {
+    font-family: 'Noto Sans TC', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ========= 導航欄 ========= */
+header.site-header {
+    background-color: var(--white);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+}
+
 .logo {
     display: flex;
     align-items: center;
     gap: 15px;
 }
 
-.logo a {
-    color: var(--primary-color); /* 使用主色調 */
-    font-size: 1.5rem;
-    font-weight: 700; /* 加粗字體 */
-    text-decoration: none;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1); /* 輕微陰影增加可讀性 */
-}
-		
-        
-        .logo img {
-            height: 50px;
-        }
-        
-        nav.main-nav ul {
-            display: flex;
-            list-style: none;
-            margin: 0;
-            padding: 0;
-        }
-        
-        nav.main-nav li {
-            margin-left: 30px;
-        }
-        
-        nav.main-nav a {
-            color: var(--text-color);
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-        
-        nav.main-nav a:hover {
-            color: var(--primary-color);
-        }
-        
-        /* 主橫幅樣式 */
-section.hero-banner {
-  background: 
-    linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), 
-    url(images/ban.webp);
-  background-size: cover;
-  background-position: 50% 30%; /* ← 這裡你可以改成你要的位置 */
-  height: 80vh;
-  display: flex;
-  align-items: center;
-  text-align: center;
-  color: var(--white);
-  margin-top: 80px;
+.logo img {
+    height: 50px;
 }
 
-        
-        .hero-content {
-            width: 100%;
-        }
-        
-        .hero-content h1 {
-            font-size: 3.5rem;
-            margin-bottom: 20px;
-            font-weight: 300;
-        }
-        
-        .hero-content p.subtitle {
-            font-size: 1.5rem;
-            margin-bottom: 30px;
-            font-weight: 300;
-        }
-        
-        .cta-button {
-            display: inline-block;
-            background-color: var(--accent-color);
-            color: var(--white);
-            padding: 12px 30px;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: 500;
-            transition: background-color 0.3s;
-        }
-        
-        .cta-button:hover {
-            background-color: var(--primary-color);
-        }
-        
-        /* 課程介紹樣式 */
-        section.intro-section {
-            padding: 80px 0;
-            background-color: var(--white);
-        }
-        
-        section.intro-section h2 {
-            text-align: center;
-            font-size: 2.5rem;
-            color: var(--primary-color);
-            margin-bottom: 50px;
-        }
-        
-        .intro-content {
-            display: flex;
-            align-items: center;
-            gap: 50px;
-        }
-        
-        .intro-text {
-            flex: 1;
-        }
-        
-        .intro-image {
-            flex: 1;
-            border-radius: 10px;
-            overflow: hidden;
-        }
-        
-        .intro-image img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-        
-        /* 課程時間樣式 */
-        section.schedule-section {
-            padding: 80px 0;
-            background-color: var(--secondary-color);
-        }
-        
-        section.schedule-section h2 {
-            text-align: center;
-            font-size: 2.5rem;
-            color: var(--primary-color);
-            margin-bottom: 50px;
-        }
-        
-        .schedule-container {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            gap: 30px;
-        }
-        
-        .schedule-card {
-            background-color: var(--white);
-            border-radius: 10px;
-            padding: 30px;
-            width: 300px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-            text-align: center;
-        }
-        
-        .schedule-card i {
-            font-size: 2.5rem;
-            color: var(--accent-color);
-            margin-bottom: 20px;
-        }
-        
-        .schedule-card h3 {
-            color: var(--primary-color);
-            margin-bottom: 15px;
-        }
-        
-        /* 報名表樣式 */
-        section.registration-section {
-            padding: 80px 0;
-            background-color: var(--white);
-        }
-        
-        section.registration-section h2 {
-            text-align: center;
-            font-size: 2.5rem;
-            color: var(--primary-color);
-            margin-bottom: 50px;
-        }
-        
-        .registration-form {
-            max-width: 600px;
-            margin: 0 auto;
-            background-color: var(--secondary-color);
-            padding: 40px;
-            border-radius: 10px;
-        }
-        
-        .form-group {
-            margin-bottom: 20px;
-        }
-        
-        .form-group label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: 500;
-        }
-        
-        .form-group input,
-        .form-group select,
-        .form-group textarea {
-            width: 100%;
-            padding: 12px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            font-family: 'Noto Sans TC', sans-serif;
-        }
-        
-        .form-group textarea {
-            height: 120px;
-        }
-        
-        .submit-btn {
-            background-color: var(--accent-color);
-            color: var(--white);
-            border: none;
-            padding: 12px 30px;
-            border-radius: 30px;
-            cursor: pointer;
-            font-size: 1rem;
-            font-weight: 500;
-            transition: background-color 0.3s;
-        }
-        
-        .submit-btn:hover {
-            background-color: var(--primary-color);
-        }
-        
-        /* 頁腳樣式 */
-        footer.site-footer {
-            background-color: var(--primary-color);
-            color: var(--white);
-            padding: 50px 0 20px;
-        }
-        
-        .footer-content {
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            margin-bottom: 30px;
-        }
-        
-        .footer-column {
-            width: 30%;
-            margin-bottom: 30px;
-        }
-        
-        .footer-column h3 {
-            font-size: 1.2rem;
-            margin-bottom: 20px;
-            position: relative;
-            padding-bottom: 10px;
-        }
-        
-        .footer-column h3::after {
-            content: '';
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            width: 50px;
-            height: 2px;
-            background-color: var(--accent-color);
-        }
-        
-        .footer-column ul {
-            list-style: none;
-            padding: 0;
-        }
-        
-        .footer-column ul li {
-            margin-bottom: 10px;
-        }
-        
-        .footer-column ul li a {
-            color: var(--white);
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-        
-        .footer-column ul li a:hover {
-            color: var(--accent-color);
-        }
-        
-        .social-links a {
-            display: inline-block;
-            margin-right: 15px;
-            color: var(--white);
-            font-size: 1.2rem;
-            transition: color 0.3s;
-        }
-        
-        .social-links a:hover {
-            color: var(--accent-color);
-        }
-        
-        .copyright {
-            text-align: center;
-            padding-top: 20px;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        
-        /* 響應式設計 */
-        @media (max-width: 768px) {
-            .header-container {
-                flex-direction: column;
-            }
-            
-            nav.main-nav ul {
-                margin-top: 20px;
-            }
-            
-            nav.main-nav li {
-                margin-left: 15px;
-                margin-right: 15px;
-            }
-            
-            .hero-content h1 {
-                font-size: 2.5rem;
-            }
-            
-            .intro-content {
-                flex-direction: column;
-            }
-            
-            .schedule-card {
-                width: 100%;
-            }
-            
-            .footer-column {
-                width: 100%;
-            }
-        }
-		
-		
+.logo a {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-decoration: none;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+nav.main-nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav.main-nav li {
+    margin-left: 30px;
+}
+
+nav.main-nav a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav.main-nav a:hover {
+    color: var(--primary-color);
+}
+
+/* ========= 主橫幅 Hero Banner ========= */
+section.hero-banner {
+    background: 
+        linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), 
+        url(images/ban.webp);
+    background-size: cover;
+    background-position: 50% 30%;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: var(--white);
+    margin-top: 80px;
+}
+
+.hero-content {
+    width: 100%;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    font-weight: 300;
+}
+
+.hero-content p.subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    font-weight: 300;
+}
+
+/* ========= 按鈕樣式 ========= */
+.cta-button,
+.submit-btn {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: var(--white);
+    padding: 12px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.3s;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.cta-button:hover,
+.submit-btn:hover {
+    background-color: var(--primary-color);
+}
+
+/* ========= 課程介紹區塊 ========= */
+section.intro-section {
+    padding: 80px 0;
+    background-color: var(--white);
+}
+
+section.intro-section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 50px;
+}
+
+.intro-content {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.intro-text {
+    flex: 1;
+}
+
+.intro-image {
+    flex: 1;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.intro-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ========= 課程時間卡片 ========= */
+section.schedule-section {
+    padding: 80px 0;
+    background-color: var(--secondary-color);
+}
+
+section.schedule-section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 50px;
+}
+
+.schedule-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.schedule-card {
+    background-color: var(--white);
+    border-radius: 10px;
+    padding: 30px;
+    width: 300px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+
+.schedule-card i {
+    font-size: 2.5rem;
+    color: var(--accent-color);
+    margin-bottom: 20px;
+}
+
+.schedule-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+/* ========= 表單區塊 ========= */
+section.registration-section {
+    padding: 80px 0;
+    background-color: var(--white);
+}
+
+section.registration-section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 50px;
+}
+
+.registration-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: var(--secondary-color);
+    padding: 40px;
+    border-radius: 10px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: 'Noto Sans TC', sans-serif;
+}
+
+.form-group textarea {
+    height: 120px;
+}
+
+/* ========= 影片嵌入 ========= */
 .video-wrapper {
     position: relative;
-    padding-bottom: 30%; /* 16:9 高寬比 */
+    padding-bottom: 30%;
     height: 0;
     overflow: hidden;
-    margin: 20px auto;       /* 垂直間距 + 水平置中 */
-    max-width: 720px;        /* ← 你可以調成 360px 或 320px 更窄 */
+    margin: 20px auto;
+    max-width: 720px;
     border-radius: 12px;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
 }
-
 
 .video-wrapper iframe {
     position: absolute;
@@ -387,4 +269,110 @@ section.hero-banner {
     left: 0;
     width: 100%;
     height: 100%;
+}
+
+/* ========= 頁腳 Footer ========= */
+footer.site-footer {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 50px 0 20px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+.footer-column {
+    width: 30%;
+    margin-bottom: 30px;
+}
+
+.footer-column h3 {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.footer-column h3::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 50px;
+    height: 2px;
+    background-color: var(--accent-color);
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+    color: var(--white);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-column ul li a:hover {
+    color: var(--accent-color);
+}
+
+.social-links a {
+    display: inline-block;
+    margin-right: 15px;
+    color: var(--white);
+    font-size: 1.2rem;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: var(--accent-color);
+}
+
+.copyright {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* ========= 響應式設計 ========= */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+    }
+
+    nav.main-nav ul {
+        margin-top: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav.main-nav li {
+        margin: 10px 15px;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .intro-content {
+        flex-direction: column;
+    }
+
+    .schedule-card {
+        width: 100%;
+    }
+
+    .footer-column {
+        width: 100%;
+    }
 }
