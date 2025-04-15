@@ -367,3 +367,24 @@ section.hero-banner {
                 width: 100%;
             }
         }
+		
+		
+.video-wrapper {
+    position: relative;
+    padding-bottom: 30%; /* 16:9 高寬比 */
+    height: 0;
+    overflow: hidden;
+    margin: 20px auto;       /* 垂直間距 + 水平置中 */
+    max-width: 720px;        /* ← 你可以調成 360px 或 320px 更窄 */
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+}
+
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
